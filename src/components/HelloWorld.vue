@@ -1,58 +1,105 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="homecontainer">
+    <div class="backgroundheader">
+      <div class="avatarbackground">
+      </div>
+      <div class="textheader">
+        Ho N@m
+      </div>
+    </div>
+    <SliderShow />
+    <MusicTheme/>
+    <div class="backgrougncontainer">
+      2021 -2022
+      <div class="backgroundconten">
+        <div class="backgroundimg">
+          <img class="imgfamily" src="../assets/family1.jpg" alt="">
+        </div>
+        <div class="backgroundtitle">cai khuc nao viet ca gi do cung duoc dai dai la duoc</div>
+      </div>
+    </div>
+    <div class="backgrougncontainer">
+      2021 -2022
+      <div class="backgroundconten">
+        <div class="backgroundtitle">cai khuc nao viet ca gi do cung duoc dai dai la duoc</div>
+        <div class="backgroundimg">
+          <img class="imgfamily" src="../assets/family2.jpg" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import MusicTheme from './MusicTheme.vue';
+import SliderShow from './SliderShow.vue';
+
 export default {
   name: 'HelloWorld',
+  components: {
+    SliderShow,
+    MusicTheme
+  },
   props: {
-    msg: String
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.backgroundheader {
+  background-color: #DEAA79;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.avatarbackground {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  overflow: hidden;
+  background-image: url("../assets/avatar.jpg");
+  background-size: 80px;
+  border: 2px solid #659287;
+  margin: auto;
+  margin-bottom: -25px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.textheader {
+  color: #659287;
+  font-weight: 900;
+  font-size: 28px;
 }
-a {
-  color: #42b983;
+
+.backgroundconten {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.backgrougncontainer {
+  width: 100%;
+  height: 200px;
+  max-width: 400px;
+  font-size: 14px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.backgroundimg {
+  width: 60%;
+  
+}
+.imgfamily{
+    width: 100%;
+    border-radius: 5px;
+  }
+.backgroundtitle {
+  width: 40%;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 14px;
 }
 </style>
